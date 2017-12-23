@@ -1,0 +1,10 @@
+cmake_minimum_required(VERSION 3.9)
+project(algorithms)
+
+set(CMAKE_CXX_STANDARD 11)
+include_directories(include)
+
+add_executable(hello_world hello_world.cpp)
+add_executable(longest_common_subsequence longest_common_subsequence.cpp include/longest_common_subsequence.h)
+add_executable(longest_increasing_subsequence longest_increasing_subsequence.cpp include/longest_increasing_subsequence.h)
+add_executable(expedition expedition.cpp include/expedition.h)
