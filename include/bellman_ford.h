@@ -3,13 +3,14 @@
 //
 
 #ifndef ALGORITHMS_BELLMAN_FORD_H
-#define INF_INT 0x7fffffff
-
-typedef struct _edge {
+#ifndef INF_INT
+#define INF_INT 0x3fffffff
+#endif
+typedef struct _bellman_ford_edge {
     int from;
     int to;
     int weight;
-} edge;
+} bellman_ford_edge;
 
 /**
  * 求最短路径算法,
@@ -21,12 +22,12 @@ typedef struct _edge {
  * @param start_point 起始顶点
  * @return 是否包含负圈,如果包含负圈,则某些点之间无最短路径
  */
-bool bellman_ford_shortest_path(int **G, int *d, int n, int start_point) {
-    auto *es = new edge[n * n];
+bool bellman_ford_shortest_path(int **G, int *d, int n, int start_point, int *prev) {
+    auto *es = new bellman_ford_edge[n * n];
     int edge_num = 0;
     for (int i = 0; i < n; ++i) {
         for (int j = 0; j < n; ++j) {
-            if (G[i][j] != 0) {
+            if (G[i][j] != INF_INT) {
                 es[edge_num].from = i;
                 es[edge_num].to = j;
                 es[edge_num].weight = G[i][j];
@@ -36,14 +37,16 @@ bool bellman_ford_shortest_path(int **G, int *d, int n, int start_point) {
     }
     for (int i = 0; i < n; ++i) {
         d[i] = INF_INT;
+        prev[i] = -1;
     }
     d[start_point] = 0;
     for (int v = 0; v < n; ++v) {
         bool update = false;
         for (int i = 0; i < edge_num; ++i) {
-            edge e = es[i];
+            bellman_ford_edge e = es[i];
             if (d[e.from] != INF_INT && d[e.from] + e.weight < d[e.to]) {
                 d[e.to] = d[e.from] + e.weight;
+                prev[e.to] = e.from;
                 update = true;
                 if (v == n - 1) {
                     delete[] es;
