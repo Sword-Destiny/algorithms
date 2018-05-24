@@ -12,3 +12,4 @@ add_executable(parentheses_balance src/parentheses_balance.cpp include/parenthes
 add_executable(binary_color_graph src/bianry_color_graph.cpp include/binaty_color_graph.h)
 add_executable(bellman_ford src/bellman_ford.cpp include/bellman_ford.h)
 add_executable(dijkstra src/dijkstra.cpp include/dijkstra.h)
+add_executable(floyd_warshall src/floyd_warshall.cpp include/floyd_warshall.h)

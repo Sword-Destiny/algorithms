@@ -33,6 +33,7 @@ bool operator>(const dijkstra_pair &d1, const dijkstra_pair &d2) {
  * @param n 顶点数量
  * @param start_point 起始顶点
  * @param d 保存结果距离
+ * @param prev 前驱节点用于路径还原
  */
 void dijkstra(int **G, int n, int start_point, int *d, int *prev) {
     for (int i = 0; i < n; ++i) {

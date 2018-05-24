@@ -20,6 +20,7 @@ typedef struct _bellman_ford_edge {
  * @param d 保存结果距离
  * @param n 顶点数量
  * @param start_point 起始顶点
+ * @param prev 前驱节点用于路径还原
  * @return 是否包含负圈,如果包含负圈,则某些点之间无最短路径
  */
 bool bellman_ford_shortest_path(int **G, int *d, int n, int start_point, int *prev) {
