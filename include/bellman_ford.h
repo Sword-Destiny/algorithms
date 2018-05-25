@@ -2,15 +2,12 @@
 // Created by yuanh on 2018/5/23.
 //
 
+#include "map_edge.h"
+
 #ifndef ALGORITHMS_BELLMAN_FORD_H
 #ifndef INF_INT
 #define INF_INT 0x3fffffff
 #endif
-typedef struct _bellman_ford_edge {
-    int from;
-    int to;
-    int weight;
-} bellman_ford_edge;
 
 /**
  * 求最短路径算法,
@@ -24,7 +21,7 @@ typedef struct _bellman_ford_edge {
  * @return 是否包含负圈,如果包含负圈,则某些点之间无最短路径
  */
 bool bellman_ford_shortest_path(int **G, int *d, int n, int start_point, int *prev) {
-    auto *es = new bellman_ford_edge[n * n];
+    auto *es = new map_edge[n * n];
     int edge_num = 0;
     for (int i = 0; i < n; ++i) {
         for (int j = 0; j < n; ++j) {
@@ -44,7 +41,7 @@ bool bellman_ford_shortest_path(int **G, int *d, int n, int start_point, int *pr
     for (int v = 0; v < n; ++v) {
         bool update = false;
         for (int i = 0; i < edge_num; ++i) {
-            bellman_ford_edge e = es[i];
+            map_edge e = es[i];
             if (d[e.from] != INF_INT && d[e.from] + e.weight < d[e.to]) {
                 d[e.to] = d[e.from] + e.weight;
                 prev[e.to] = e.from;
