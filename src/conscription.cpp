@@ -20,6 +20,9 @@ int main() {
                                     new int[3]{1, 2, 2049},
                                     new int[3]{4, 2, 2104},
                                     new int[3]{2, 2, 781}};
+
+
+
     cout << "conscription cost : " << conscription(n, m, r, relations) << endl;
     for (int i = 0; i < 8; ++i) {
         delete[] relations[i];
