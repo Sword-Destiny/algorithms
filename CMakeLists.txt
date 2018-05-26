@@ -14,3 +14,4 @@ add_executable(bellman_ford src/bellman_ford.cpp include/bellman_ford.h include/
 add_executable(dijkstra src/dijkstra.cpp include/dijkstra.h)
 add_executable(floyd_warshall src/floyd_warshall.cpp include/floyd_warshall.h)
 add_executable(kruskal src/kruskal.cpp include/kruskal.h include/union_find_set.h)
+add_executable(conscription src/conscription.cpp include/conscription.h)

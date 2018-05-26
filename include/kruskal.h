@@ -17,7 +17,7 @@ using std::sort;
  * @param G 图
  * @param n 顶点数量
  * @param min_cost 最小树权值之和
- * @param res_edges 保存最小树
+ * @param res_edges 保存最小树,应该是n-1项
  */
 void kruskal(int **G, int n, int &min_cost, map_edge *res_edges) {
     int edge_num = 0;
