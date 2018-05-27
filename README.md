@@ -1,2 +1,2 @@
 # algorithms
-destinyCreative2
+挑战程序设计竞赛,巫泽俊主译,第二版,代码复现

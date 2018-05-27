@@ -22,6 +22,11 @@ bool is_prime(int n) {
     return n != 1;
 }
 
+/**
+ * 求约数
+ * @param n 数
+ * @return 约数
+ */
 vector<int> divisor(int n) {
     int sn = (int) sqrt(n);
     vector<int> res;
@@ -36,6 +41,11 @@ vector<int> divisor(int n) {
     return res;
 }
 
+/**
+ * 因式分解
+ * @param n 数
+ * @return 因式分解
+ */
 map<int, int> prime_factor(int n) {
     map<int, int> res;
     int sn = (int) sqrt(n);
