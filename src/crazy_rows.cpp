@@ -19,7 +19,8 @@ int main() {
 		cout << endl;
 	}
 	cout << endl;
-	cout << "crazy rows : " << crazy_rows(n, m) << endl << endl;
+	int sn = crazy_rows(n, m);
+	cout << "crazy rows : " << sn << endl << endl;
 	cout << "m :" << endl;
 	for (int i = 0; i < n; ++i) {
 		for (int j = 0; j < n; ++j) {

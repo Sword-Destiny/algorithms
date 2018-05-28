@@ -9,7 +9,7 @@
 using std::cout;
 using std::endl;
 
-#include <algorithm>
+#include <utility>
 
 using std::swap;
 
@@ -54,8 +54,8 @@ int crazy_rows(int n, int **m) {
 			for (int s = swap_index; s > i; --s) {
 				cout << "swap : " << (s - 1) << " <-> " << s << endl;//TODO : comment
 				swap_num++;
-				std::swap(last_none_zero[s], last_none_zero[s - 1]);
-				std::swap(m[s], m[s - 1]);
+				swap(last_none_zero[s], last_none_zero[s - 1]);
+				swap(m[s], m[s - 1]);
 			}
 		}
 	}
