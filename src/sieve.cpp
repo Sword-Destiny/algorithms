@@ -11,7 +11,7 @@ int main() {
     int n = 97;
     auto *prime = new int[n / 2 + 1];
     int prime_num = sieve(prime, n);
-    cout << "prime < " << n << " : ";
+    cout << "prime <= " << n << " : ";
     for (int i = 0; i < prime_num; ++i) {
         cout << prime[i] << " ";
     }

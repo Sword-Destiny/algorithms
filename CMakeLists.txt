@@ -17,3 +17,4 @@ add_executable(kruskal src/kruskal.cpp include/kruskal.h include/union_find_set.
 add_executable(conscription src/conscription.cpp include/conscription.h)
 add_executable(prime src/prime.cpp include/prime.h include/gcd.h)
 add_executable(sieve src/sieve.cpp include/sieve.h)
+add_executable(fast_pow src/fast_pow.cpp include/fast_pow.h)
