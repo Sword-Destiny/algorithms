@@ -39,7 +39,7 @@ bool fit(int k, int n, const double *v, const double *w, double x, double *y) {
 /**
  * max average
  * 有n个物品的种类和价值分别为wi和vi,从中选出个物品使得平均单位价值最高
- * 注意此题受到精度影响
+ * 注意此题受到精度影响,另外简单的贪心算法是不正确的
  * @param k 选出k个
  * @param n 物品数量
  * @param v 物品价值
