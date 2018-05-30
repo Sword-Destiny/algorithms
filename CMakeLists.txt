@@ -22,3 +22,4 @@ add_executable(minimum_scalar_product src/minimum_scalar_product.cpp include/min
 add_executable(crazy_rows src/crazy_rows.cpp include/crazy_rows.h)
 add_executable(bribe_prisoners src/bribe_prisoners.cpp include/bribe_prisoners.h)
 add_executable(cable_master src/mid_level/cable_master.cpp include/mid_level/cable_master.h)
+add_executable(aggressive_cows src/mid_level/aggressive_cows.cpp include/mid_level/aggressive_cows.h)
