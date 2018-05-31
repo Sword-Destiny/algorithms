@@ -24,3 +24,4 @@ add_executable(bribe_prisoners src/bribe_prisoners.cpp include/bribe_prisoners.h
 add_executable(cable_master src/mid_level/cable_master.cpp include/mid_level/cable_master.h)
 add_executable(aggressive_cows src/mid_level/aggressive_cows.cpp include/mid_level/aggressive_cows.h)
 add_executable(max_average src/mid_level/max_average.cpp include/mid_level/max_average.h)
+add_executable(sum_s_lesat_subsequence src/mid_level/sum_s_lesat_subsequence.cpp include/mid_level/sum_s_lesat_subsequence.h)

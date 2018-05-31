@@ -16,11 +16,11 @@ typedef struct _max_average_s {
     double y; // y = v - x * w;
 } max_average_s;
 
-bool operator<(const max_average_s &a1, const max_average_s &a2) {
+inline bool operator<(const max_average_s &a1, const max_average_s &a2) {
     return a1.y < a2.y;
 }
 
-bool operator>(const max_average_s &a1, const max_average_s &a2) {
+inline bool operator>(const max_average_s &a1, const max_average_s &a2) {
     return a1.y > a2.y;
 }
 
