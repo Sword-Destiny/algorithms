@@ -13,7 +13,7 @@
  * @param s 总和s
  * @param begin 保存结果区间
  * @param end 保存结果区间
- * @return 结果区间长度
+ * @return 结果区间长度,如果res>n则为无解
  */
 int sum_s_lesat_subsequence(const int *a, int n, int s, int &begin, int &end) {
     int res = n + 1;
