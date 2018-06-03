@@ -2,7 +2,7 @@
 // Created by yuanh on 2018/5/23.
 //
 #include <iostream>
-#include "../include/bellman_ford.h"
+#include "../../include/base/bellman_ford.h"
 
 
 using std::cout;

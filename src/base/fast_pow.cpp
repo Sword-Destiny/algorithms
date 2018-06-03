@@ -1,7 +1,7 @@
 //
 // Created by yuanh on 2018/5/28.
 //
-#include "../include/fast_pow.h"
+#include "../../include/base/fast_pow.h"
 #include <iostream>
 
 using std::cout;

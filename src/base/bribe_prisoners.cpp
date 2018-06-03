@@ -2,7 +2,7 @@
 // Created by yuanh on 2018/5/28.
 //
 
-#include "../include/bribe_prisoners.h"
+#include "../../include/base/bribe_prisoners.h"
 #include <iostream>
 
 using std::cout;

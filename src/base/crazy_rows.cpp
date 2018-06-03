@@ -1,7 +1,7 @@
 //
 // Created by yuanh on 2018/5/28.
 //
-#include "../include/crazy_rows.h"
+#include "../../include/base/crazy_rows.h"
 
 int main() {
 	int n = 4;

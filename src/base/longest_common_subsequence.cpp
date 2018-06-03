@@ -2,7 +2,7 @@
 // Created by sworddestiny on 17-12-16.
 //
 
-#include "../include/longest_common_subsequence.h"
+#include "../../include/base/longest_common_subsequence.h"
 #include <iostream>
 
 using std::cout;

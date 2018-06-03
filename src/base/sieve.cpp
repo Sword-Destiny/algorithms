@@ -1,7 +1,7 @@
 //
 // Created by yuanh on 2018/5/27.
 //
-#include "../include/sieve.h"
+#include "../../include/base/sieve.h"
 #include <iostream>
 
 using std::cout;

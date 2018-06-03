@@ -3,7 +3,7 @@
 //
 
 #include <iostream>
-#include "../include/longest_increasing_subsequence.h"
+#include "../../include/base/longest_increasing_subsequence.h"
 
 using std::cout;
 using std::endl;

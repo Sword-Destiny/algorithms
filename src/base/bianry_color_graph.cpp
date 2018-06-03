@@ -2,7 +2,7 @@
 // Created by sworddestiny on 18-5-22.
 //
 
-#include "../include/binaty_color_graph.h"
+#include "../../include/base/binaty_color_graph.h"
 #include <iostream>
 
 using std::cout;

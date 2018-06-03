@@ -3,7 +3,7 @@
 //
 
 #include <iostream>
-#include "base/parentheses_balance.h"
+#include "../../include/base/parentheses_balance.h"
 
 using std::cout;
 using std::endl;

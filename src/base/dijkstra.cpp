@@ -3,7 +3,7 @@
 //
 
 #include <iostream>
-#include "../include/dijkstra.h"
+#include "../../include/base/dijkstra.h"
 
 using std::cout;
 using std::endl;

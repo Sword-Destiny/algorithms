@@ -2,7 +2,7 @@
 // Created by yuanh on 2018/5/28.
 //
 
-#include "../include/minimum_scalar_product.h"
+#include "../../include/base/minimum_scalar_product.h"
 #include <iostream>
 
 using std::cout;

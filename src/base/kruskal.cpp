@@ -1,7 +1,7 @@
 //
 // Created by yuanh on 2018/5/25.
 //
-#include "../include/kruskal.h"
+#include "../../include/base/kruskal.h"
 #include <iostream>
 
 using std::cout;

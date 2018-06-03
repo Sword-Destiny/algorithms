@@ -1,7 +1,7 @@
 //
 // Created by yuanh on 2018/5/26.
 //
-#include "../include/conscription.h"
+#include "../../include/base/conscription.h"
 #include <iostream>
 
 using std::cout;

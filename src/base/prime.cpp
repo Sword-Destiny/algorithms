@@ -2,7 +2,7 @@
 // Created by yuanh on 2018/5/26.
 //
 
-#include "../include/prime.h"
+#include "../../include/base/prime.h"
 #include <iostream>
 
 using std::cout;
