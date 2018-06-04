@@ -28,3 +28,4 @@ add_executable(reading_problem src/mid_level/reading_problem.cpp include/mid_lev
 add_executable(sieve src/base/sieve.cpp include/base/sieve.h)
 add_executable(sum_s_lesat_subsequence src/mid_level/sum_s_lesat_subsequence.cpp include/mid_level/sum_s_lesat_subsequence.h)
 add_executable(fliptile src/mid_level/fliptile.cpp include/mid_level/fliptile.h)
+add_executable(four_sum_zero src/mid_level/four_sum_zero.cpp include/mid_level/four_sum_zero.h)
