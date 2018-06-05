@@ -9,8 +9,6 @@
 using std::sort;
 using std::lower_bound;
 using std::upper_bound;
-using std::greater;
-using std::less;
 
 template<typename T>
 struct _four_sum_zero_answer {
