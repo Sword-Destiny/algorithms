@@ -11,7 +11,7 @@ int main() {
 			new int[4]{1, 1, 0, 0},
 			new int[4]{1, 0, 0, 0},
 	};
-	cout << "m :" << endl;
+	cout << "row :" << endl;
 	for (int i = 0; i < n; ++i) {
 		for (int j = 0; j < n; ++j) {
 			cout << m[i][j] << " ";
@@ -21,7 +21,7 @@ int main() {
 	cout << endl;
 	int sn = crazy_rows(n, m);
 	cout << "crazy rows : " << sn << endl << endl;
-	cout << "m :" << endl;
+	cout << "row :" << endl;
 	for (int i = 0; i < n; ++i) {
 		for (int j = 0; j < n; ++j) {
 			cout << m[i][j] << " ";

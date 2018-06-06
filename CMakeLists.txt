@@ -4,6 +4,7 @@ project(algorithms)
 set(CMAKE_CXX_STANDARD 11)
 include_directories(include)
 
+add_executable(fast_fibonacci src/mid_level/fast_fibonacci.cpp include/mid_level/fast_fibonacci.h include/mid_level/matrix.h)
 add_executable(face_the_right_way src/mid_level/face_the_right_way.cpp include/mid_level/face_the_right_way.h)
 add_executable(aggressive_cows src/mid_level/aggressive_cows.cpp include/mid_level/aggressive_cows.h)
 add_executable(bellman_ford src/base/bellman_ford.cpp include/base/bellman_ford.h include/base/map_edge.h)

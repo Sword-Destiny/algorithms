@@ -25,8 +25,8 @@ public:
     segment_tree(unsigned long _n, unsigned long max_n) : n(_n), data(new T[max_n]) {
         asm ("bsr %1,%%eax ;"
              "movl %%eax,%0 ;"
-        : "=m"(n)
-        : "m" (_n)
+        : "=row"(n)
+        : "row" (_n)
         );
         n = ((unsigned) 1) << (n + 1);
         // 上面的操作是把n变成大于_n的2次幂值

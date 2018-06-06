@@ -16,7 +16,7 @@ int main() {
 	face_the_right_way(n, faces, is_switch, k, m);
 	cout << "face_the_right_way:" << endl;
 	cout << "k : " << k << endl;
-	cout << "m : " << m << endl;
+	cout << "row : " << m << endl;
 	cout << "is_switch : ";
 	for (int i = 0; i < n; ++i) {
 		cout << is_switch[i] << " ";
