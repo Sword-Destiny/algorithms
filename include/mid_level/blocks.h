@@ -9,6 +9,7 @@
 template<typename T>
 /**
  * 染色问题,使用递推矩阵求解
+ * POJ No.3734
  * @tparam T 类型参数
  * @param n n
  * @param mod 模

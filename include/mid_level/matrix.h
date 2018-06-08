@@ -9,6 +9,11 @@
 using std::memcpy;
 using std::memset;
 
+#include <iostream>
+
+using std::ostream;
+using std::endl;
+
 template<typename T>
 /**
  * 矩阵类
@@ -149,6 +154,20 @@ public:
 
     T *&operator[](int m) const {
         return data[m];
+    }
+
+    friend ostream &operator<<(ostream &os, const matrix &m) {
+        os << "matrix : ";
+        for (int i = 0; i < m.row; ++i) {
+            if (i != 0) {
+                os << "         ";
+            }
+            for (int j = 0; j < m.column; ++j) {
+                os << m[i][j] << " ";
+            }
+            os << endl;
+        }
+        return os;
     }
 };
 

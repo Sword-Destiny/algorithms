@@ -4,6 +4,7 @@ project(algorithms)
 set(CMAKE_CXX_STANDARD 11)
 include_directories(include)
 
+add_executable(matrix_power_series src/mid_level/matrix_power_series.cpp include/mid_level/matrix_power_series.h)
 add_executable(blocks src/mid_level/blocks.cpp include/mid_level/blocks.h)
 add_executable(fast_fibonacci src/mid_level/fast_fibonacci.cpp include/mid_level/fast_fibonacci.h include/mid_level/matrix.h)
 add_executable(face_the_right_way src/mid_level/face_the_right_way.cpp include/mid_level/face_the_right_way.h)
