@@ -152,8 +152,8 @@ public:
         delete[] data;
     }
 
-    T *&operator[](int m) const {
-        return data[m];
+    T *&operator[](int r) const {
+        return data[r];
     }
 
     friend ostream &operator<<(ostream &os, const matrix &m) {

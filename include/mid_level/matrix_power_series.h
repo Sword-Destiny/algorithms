@@ -8,6 +8,7 @@
 
 template<typename T>
 /**
+ * POJ No.3233
  * 求矩阵的前k次幂和
  * 注意矩阵m的行列必须相等
  * @tparam T 类型参数
