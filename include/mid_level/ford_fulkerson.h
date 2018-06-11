@@ -8,15 +8,11 @@
 #endif
 
 #include <algorithm>
-
-using std::min;
-
 #include <vector>
-
-using std::vector;
-
 #include <cstring>
 
+using std::min;
+using std::vector;
 using std::memset;
 
 typedef struct ford_fulkerson_edge {

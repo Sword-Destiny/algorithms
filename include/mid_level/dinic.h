@@ -99,6 +99,8 @@ int dinic_max_flow(int s, int t, vector<di_edge> *G, int V) {
     while (true) {
         bfs(s, V, G, level);
         if (level[t] < 0) {
+            delete[] level;
+            delete[] iter;
             return flow;
         }
         memset(iter, 0, sizeof(*iter) * V);
