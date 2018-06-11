@@ -4,6 +4,7 @@ project(algorithms)
 set(CMAKE_CXX_STANDARD 11)
 include_directories(include)
 
+add_executable(dinic src/mid_level/dinic.cpp include/mid_level/dinic.h)
 add_executable(ford_fulkerson src/mid_level/ford_fulkerson.cpp include/mid_level/ford_fulkerson.h)
 add_executable(traveller_problem src/mid_level/traveller_problem.cpp include/mid_level/traveller_problem.h)
 add_executable(matrix_power_series src/mid_level/matrix_power_series.cpp include/mid_level/matrix_power_series.h)

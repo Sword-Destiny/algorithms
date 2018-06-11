@@ -31,18 +31,18 @@ typedef struct ford_fulkerson_edge {
  * @param used 是否被访问过
  * @param s 起点
  * @param t 终点
- * @param f 流量
+ * @param flow 流量
  * @return 増广路流量
  */
-int dfs(int s, int t, int f, vector<ff_edge> *G, bool *used) {
+int dfs(int s, int t, int flow, vector<ff_edge> *G, bool *used) {
     if (s == t) {
-        return f;
+        return flow;
     }
     used[s] = true;
     for (int i = 0; i < G[s].size(); ++i) {
         ff_edge &e = G[s][i];
         if (!used[e.to] && e.capacity > 0) {
-            int d = dfs(e.to, t, min(f, e.capacity), G, used);
+            int d = dfs(e.to, t, min(flow, e.capacity), G, used);
             if (d > 0) {
                 e.capacity -= d;
                 G[e.to][e.reverse].capacity += d;
@@ -56,16 +56,16 @@ int dfs(int s, int t, int f, vector<ff_edge> *G, bool *used) {
 /**
  * ford_fulkerson最大流算法,注意G最后会被改变
  * @param G 图
- * @param v 边的数量
+ * @param V 边的数量
  * @param s 起点
  * @param t 终点
  * @return 最大流
  */
-int ford_fulkerson(vector<ff_edge> *G, int v, int s, int t) {
-    auto *used = new bool[v];
+int ford_fulkerson(vector<ff_edge> *G, int V, int s, int t) {
+    auto *used = new bool[V];
     int flow = 0;
     while (true) {
-        memset(used, 0, sizeof(*used) * v);
+        memset(used, 0, sizeof(*used) * V);
         int f = dfs(s, t, INF_INT, G, used);
         if (f == 0) {
             delete[] used;
