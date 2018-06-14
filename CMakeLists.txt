@@ -36,4 +36,5 @@ add_executable(sum_s_lesat_subsequence src/mid_level/sum_s_lesat_subsequence.cpp
 add_executable(fliptile src/mid_level/fliptile.cpp include/mid_level/fliptile.h)
 add_executable(four_sum_zero src/mid_level/four_sum_zero.cpp include/mid_level/four_sum_zero.h)
 add_executable(bubble_swap_time src/mid_level/bubble_swap_times.cpp include/mid_level/bubble_swap_times.h include/mid_level/binary_indexed_tree.h include/mid_level/segment_tree.h)
-add_executable(binary_graph_flow src/mid_level/binary_partite_matching.cpp include/mid_level/binary_partite_matching.h)
+add_executable(binary_partite_matching src/mid_level/binary_partite_matching.cpp include/mid_level/binary_partite_matching.h)
+add_executable(dancing_links src/mid_level/dancing_links.cpp include/mid_level/dancing_links.h)
