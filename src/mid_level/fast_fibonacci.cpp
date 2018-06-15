@@ -10,7 +10,7 @@ using std::endl;
 
 int main() {
     long long mod = 0x7fffffffffffffff;
-    for (int i = 0; i < 50; ++i) {
+    for (unsigned int i = 0; i < 50; ++i) {
         cout << "fast_fibonacci " << i << " : " << fast_fibonacci(i, mod) << endl;
     }
     return 0;

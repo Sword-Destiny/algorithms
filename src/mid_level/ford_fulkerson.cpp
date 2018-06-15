@@ -11,8 +11,8 @@ using std::endl;
 
 int main() {
     int v = 5;
-    vector<ff_edge> *G = new vector<ff_edge>[v];
-    vector<ff_edge> *G_res = new vector<ff_edge>[v];
+    auto *G = new vector<ff_edge>[v];
+    auto *G_res = new vector<ff_edge>[v];
     add_edge(G, 0, 1, 10);
     add_edge(G, 0, 2, 2);
     add_edge(G, 1, 2, 6);

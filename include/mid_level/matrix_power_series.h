@@ -17,7 +17,7 @@ template<typename T>
  * @param mod 数字太大求模
  * @return 结果
  */
-matrix<T> matrix_power_series(matrix<T> m, int k, T mod) {
+matrix<T> matrix_power_series(matrix<T> m, unsigned int k, T mod) {
     matrix<T> b(m.row * m.row, m.column * m.column);
     for (int i = 0; i < m.row; ++i) {
         for (int j = 0; j < m.column; ++j) {

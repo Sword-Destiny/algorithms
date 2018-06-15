@@ -136,14 +136,14 @@ public:
      * @param n n次幂
      * @return 结果
      */
-    matrix pow(long long n) {
+    matrix pow(unsigned long long n) {
         matrix<T> m = *this;
         matrix<T> res(m.row, m.row);
         for (int i = 0; i < m.row; ++i) {
             res[i][i] = 1;
         }
         while (n > 0) {
-            if (n & 1) {
+            if (n & (unsigned)1) {
                 res = res.multiply(m);
             }
             m = m.multiply(m);
@@ -159,14 +159,14 @@ public:
      * @param mod 结果太大的时候求mod
      * @return 结果
      */
-    matrix pow(long long n, T mod) {
+    matrix pow(unsigned long long n, T mod) {
         matrix<T> m = *this;
         matrix<T> res(m.row, m.row);
         for (int i = 0; i < m.row; ++i) {
             res[i][i] = 1;
         }
         while (n > 0) {
-            if (n & 1) {
+            if (n & (unsigned)1) {
                 res = res.multiply(m, mod);
             }
             m = m.multiply(m, mod);

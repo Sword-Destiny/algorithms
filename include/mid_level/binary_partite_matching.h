@@ -17,7 +17,7 @@ int binary_partite_matching(int C, int T, bool **can) {
     int s = C + T;
     int t = s + 1;
     int v = t + 1;
-    vector<di_edge> *G = new vector<di_edge>[v];
+    auto *G = new vector<di_edge>[v];
     for (int i = 0; i < C; ++i) {
         add_edge(G, s, i, 1);
     }

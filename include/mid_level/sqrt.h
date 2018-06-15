@@ -54,8 +54,8 @@ float sqrt_fast(float x) {
     if (x == 0) return 0;
     float result = x;
     float xhalf = 0.5f * result;
-    int i = *(int *) &result;
-    i = 0x5f375a86 - (i >> 1);
+    unsigned int i = *(unsigned int *) &result;
+    i = 0x5f375a86 - (i >> (unsigned)1);
     result = *(float *) &i;
     result = result * (1.5f - xhalf * result * result);
     result = result * (1.5f - xhalf * result * result);

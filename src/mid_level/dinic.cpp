@@ -11,8 +11,8 @@ using std::endl;
 
 int main() {
     int v = 5;
-    vector<di_edge> *G = new vector<di_edge>[v];
-    vector<di_edge> *G_res = new vector<di_edge>[v];
+    auto *G = new vector<di_edge>[v];
+    auto *G_res = new vector<di_edge>[v];
     add_edge(G, 0, 1, 10);
     add_edge(G, 0, 2, 2);
     add_edge(G, 1, 2, 6);

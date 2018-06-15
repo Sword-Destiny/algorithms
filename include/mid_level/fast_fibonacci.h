@@ -7,7 +7,7 @@
 #include "matrix.h"
 
 template<typename T>
-T fast_fibonacci(int n, T mod) {
+T fast_fibonacci(unsigned int n, T mod) {
     matrix<T> m(2, 2);
     m[0][0] = 1;
     m[0][1] = 1;

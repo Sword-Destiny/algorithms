@@ -15,7 +15,7 @@ template<typename T>
  * @param mod 模
  * @return 方案个数
  */
-T blocks(int n, T mod) {
+T blocks(unsigned int n, T mod) {
     matrix<T> m(3, 3);
     m[0][0] = 2;
     m[0][1] = 1;

@@ -28,24 +28,24 @@ int dancing_links(matrix<bool> &m, bool *selected) {
         selected[i] = true;
         int remove_row = 0;
         int remove_column = 0;
-        bool *rr = new bool[m.row]; //要移除的行
+        auto *rr = new bool[m.row]; //要移除的行
         memset(rr, 0, sizeof(*rr) * m.row);
-        bool *rc = new bool[m.column]; //要移除的列
+        auto *rc = new bool[m.column]; //要移除的列
         memset(rc, 0, sizeof(*rc) * m.column);
-        rr[i] = 1;
+        rr[i] = true;
         for (int c = 0; c < m.column; ++c) {
             if (m[i][c]) {
                 remove_column++;
-                rc[c] = 1;
+                rc[c] = true;
                 for (int r = 0; r < m.row; ++r) {
                     if (r != i && m[r][c]) {
                         remove_row++;
-                        rr[r] = 1;
+                        rr[r] = true;
                     }
                 }
             }
         }
-        bool *sub_selected = new bool[m.row - remove_row]; //子问题参数
+        auto *sub_selected = new bool[m.row - remove_row]; //子问题参数
         memset(sub_selected, 0, sizeof(*sub_selected) * (m.row - remove_row));
         matrix<bool> new_m(m.row - remove_row, m.column - remove_column); //子问题参数
         int nr = 0;

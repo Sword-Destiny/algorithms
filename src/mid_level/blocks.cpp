@@ -11,7 +11,7 @@ using std::endl;
 
 int main() {
     int mod = 10007;
-    for (int i = 1; i <= 10; ++i) {
+    for (unsigned int i = 1; i <= 10; ++i) {
         cout << "blocks " << i << " : " << blocks(i, mod) << endl;
     }
     return 0;
