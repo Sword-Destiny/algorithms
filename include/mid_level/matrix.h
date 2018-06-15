@@ -42,7 +42,18 @@ public:
         }
     }
 
+    matrix(int r, int c, T **m) : row(r), column(c) {
+        data = new T *[row];
+        for (int i = 0; i < row; ++i) {
+            data[i] = new T[column];
+            memcpy(data[i], m[i], column * sizeof(*data[i]));
+        }
+    }
+
     matrix &operator=(const matrix &m) {
+        if (&m == this) {
+            return *this;
+        }
         for (int i = 0; i < row; ++i) {
             delete[] data[i];
         }
@@ -54,6 +65,25 @@ public:
             data[i] = new T[column];
             memcpy(data[i], m.data[i], column * sizeof(*data[i]));
         }
+        return *this;
+    }
+
+    bool operator==(const matrix &m) const {
+        if (row != m.row || column != m.column) {
+            return false;
+        }
+        for (int r = 0; r < row; ++r) {
+            for (int c = 0; c < column; ++c) {
+                if (m[r][c] != data[r][c]) {
+                    return false;
+                }
+            }
+        }
+        return true;
+    }
+
+    inline bool operator!=(const matrix &m) const {
+        return !operator==(m);
     }
 
     inline matrix operator*(const matrix &m) {

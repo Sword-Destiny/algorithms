@@ -14,7 +14,7 @@
  * @param selected 最后选择的行
  * @return 选择的行数
  */
-int dancing_links(matrix<bool> m, bool *selected) {
+int dancing_links(matrix<bool> &m, bool *selected) {
     if (m.row == 1) { //只有一行的情况
         for (int i = 0; i < m.column; ++i) {
             if (!m[0][i]) {

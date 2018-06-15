@@ -18,13 +18,7 @@ int main() {
             new bool[7]{false, true, false, false, false, false, true},
             new bool[7]{false, false, false, true, true, false, true},
     };
-
-    matrix<bool> m(6, 7);
-    for (int i = 0; i < m.row; ++i) {
-        for (int j = 0; j < m.column; ++j) {
-            m[i][j] = can[i][j];
-        }
-    }
+    matrix<bool> m(6, 7, can);
     auto *selected = new bool[m.row];
     memset(selected, 0, sizeof(*selected) * m.row);
     int res = dancing_links(m, selected);
