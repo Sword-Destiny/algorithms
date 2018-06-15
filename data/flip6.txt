@@ -1,0 +1,7 @@
+5
+5
+b b b w w
+b b b w w
+b w b b w
+b b b w w
+b b b w w
