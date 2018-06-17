@@ -22,7 +22,7 @@ int binary_partite_matching(int C, int T, bool **can) {
         add_edge(G, s, i, 1);
     }
     for (int i = 0; i < T; ++i) {
-        add_edge(G, T + i, t, 1);
+        add_edge(G, C + i, t, 1);
     }
     for (int i = 0; i < C; ++i) {
         for (int j = 0; j < T; ++j) {

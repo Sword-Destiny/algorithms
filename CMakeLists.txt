@@ -39,3 +39,4 @@ add_executable(bubble_swap_time src/mid_level/bubble_swap_times.cpp include/mid_
 add_executable(binary_partite_matching src/mid_level/binary_partite_matching.cpp include/mid_level/binary_partite_matching.h)
 add_executable(dancing_links src/mid_level/dancing_links.cpp include/mid_level/dancing_links.h)
 add_executable(min_cost_flow src/mid_level/min_cost_flow.cpp include/mid_level/min_cost_flow.h)
+add_executable(asteroids src/mid_level/asteroids.cpp include/mid_level/asteroids.h)
