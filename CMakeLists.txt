@@ -40,3 +40,4 @@ add_executable(binary_partite_matching src/mid_level/binary_partite_matching.cpp
 add_executable(dancing_links src/mid_level/dancing_links.cpp include/mid_level/dancing_links.h)
 add_executable(min_cost_flow src/mid_level/min_cost_flow.cpp include/mid_level/min_cost_flow.h)
 add_executable(asteroids src/mid_level/asteroids.cpp include/mid_level/asteroids.h)
+add_executable(dining src/mid_level/dining.cpp include/mid_level/dining.h)

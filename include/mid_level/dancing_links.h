@@ -9,7 +9,7 @@
 /**
  * 求解精确覆盖问题的通用算法
  * dancing links
- * 舞蹈的链条算法
+ * 舞动的链条算法
  * @param m 矩阵
  * @param selected 最后选择的行
  * @return 选择的行数
