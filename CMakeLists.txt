@@ -3,6 +3,7 @@ project(algorithms)
 
 set(CMAKE_CXX_STANDARD 11)
 include_directories(include)
+add_definitions(-O3)
 
 add_executable(dinic src/mid_level/dinic.cpp include/mid_level/dinic.h)
 add_executable(ford_fulkerson src/mid_level/ford_fulkerson.cpp include/mid_level/ford_fulkerson.h)
@@ -41,3 +42,4 @@ add_executable(dancing_links src/mid_level/dancing_links.cpp include/mid_level/d
 add_executable(min_cost_flow src/mid_level/min_cost_flow.cpp include/mid_level/min_cost_flow.h)
 add_executable(asteroids src/mid_level/asteroids.cpp include/mid_level/asteroids.h)
 add_executable(dining src/mid_level/dining.cpp include/mid_level/dining.h)
+add_executable(orthogonal_latin_squares src/mid_level/orthogonal_latin_quares.cpp include/mid_level/orthogonal_latin_squares.h include/mid_level/array.h)
