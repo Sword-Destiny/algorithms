@@ -14,7 +14,7 @@
  * @param selected 最后选择的行
  * @return 选择的行数
  */
-int dancing_links(matrix<bool> &m, bool *selected) {
+int dancing_links(const matrix<bool> &m, bool *selected) {
     if (m.row == 1) { //只有一行的情况
         for (int i = 0; i < m.column; ++i) {
             if (!m[0][i]) {
@@ -35,14 +35,22 @@ int dancing_links(matrix<bool> &m, bool *selected) {
         rr[i] = true;
         for (int c = 0; c < m.column; ++c) {
             if (m[i][c]) {
-                remove_column++;
                 rc[c] = true;
                 for (int r = 0; r < m.row; ++r) {
                     if (r != i && m[r][c]) {
-                        remove_row++;
                         rr[r] = true;
                     }
                 }
+            }
+        }
+        for (int r = 0; r < m.row; ++r) {
+            if(rr[r]){
+                remove_row++;
+            }
+        }
+        for (int c = 0; c < m.column; ++c) {
+            if(rc[c]){
+                remove_column++;
             }
         }
         auto *sub_selected = new bool[m.row - remove_row]; //子问题参数
