@@ -24,6 +24,13 @@ int main() {
             new int[n]{8, 3, 6, 0, 9, 1, 5, 2, 4, 7},
             new int[n]{9, 2, 8, 1, 6, 7, 4, 0, 3, 5}
     };
+//    int n = 4;
+//    auto **a = new int *[n]{
+//            new int[n]{3, 0, 1, 2},
+//            new int[n]{2, 1, 0, 3},
+//            new int[n]{0, 3, 2, 1},
+//            new int[n]{1, 2, 3, 0},
+//    };
     matrix<int> m(n, n, a);
     matrix<int> res = orthogonal_latin_squares(m);
     cout << "orthogonal_latin_squares res : " << endl;
@@ -34,7 +41,7 @@ int main() {
         cout << endl;
     }
     cout << endl;
-    // 一个可能的解,书中说只有这一个解,我没有验证
+    // 一个可能的解,也是我们这个程序的输出,书中说只有这一个解,我没有验证
     // 0 2 8 5 9 4 7 3 6 1
     // 1 7 4 9 3 6 5 0 2 8
     // 2 5 6 4 8 7 0 1 9 3

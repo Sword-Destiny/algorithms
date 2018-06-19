@@ -131,7 +131,7 @@ matrix<int> orthogonal_latin_squares(matrix<int> &m) {
         for (auto &arr : transversal) {
             bool *dancing_line = dancing_links_m[index++];
             for (int di = 0; di < n; ++di) {
-                dancing_line[di] = di == i;
+                dancing_line[di] = di == m[i][0];
             }
             for (int di = n; di < N; ++di) {
                 dancing_line[di] = false;
@@ -151,7 +151,7 @@ matrix<int> orthogonal_latin_squares(matrix<int> &m) {
             int number = -1;
             for (int i = 0; i < n; ++i) {
                 if (line[i]) {
-                    number = i;
+                    number = m[i][0];
                     break;
                 }
             }
