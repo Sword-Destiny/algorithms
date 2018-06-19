@@ -10,7 +10,7 @@ using std::endl;
 #include "../../include/mid_level/orthogonal_latin_squares.h"
 
 int main() {
-    // 正交拉丁方的问题其解空间是天文数字,此算法不算非常高效,10x10的矩阵在i7-7700k上可能要运行半个小时,请使用小一点的矩阵进行测试
+    // 正交拉丁方的问题其解空间很大,10x10的矩阵在i7-7700k上可能要运行半个小时,请使用小一点的矩阵进行测试
     int n = 10;
     auto **a = new int *[n]{
             new int[n]{0, 1, 2, 3, 4, 5, 6, 7, 8, 9},
