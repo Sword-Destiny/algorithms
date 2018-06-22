@@ -44,3 +44,4 @@ add_executable(asteroids src/mid_level/asteroids.cpp include/mid_level/asteroids
 add_executable(dining src/mid_level/dining.cpp include/mid_level/dining.h)
 add_executable(orthogonal_latin_squares src/mid_level/orthogonal_latin_quares.cpp include/mid_level/orthogonal_latin_squares.h include/mid_level/array.h)
 add_executable(dual_core_cpu src/mid_level/dual_core_cpu.cpp include/mid_level/dual_core_cpu.h)
+add_executable(farm_tour src/mid_level/farm_tour.cpp include/mid_level/farm_tour.h)
