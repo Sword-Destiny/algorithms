@@ -46,3 +46,4 @@ add_executable(orthogonal_latin_squares src/mid_level/orthogonal_latin_quares.cp
 add_executable(dual_core_cpu src/mid_level/dual_core_cpu.cpp include/mid_level/dual_core_cpu.h)
 add_executable(farm_tour src/mid_level/farm_tour.cpp include/mid_level/farm_tour.h)
 add_executable(the_windys src/mid_level/the_windys.cpp include/mid_level/the_windys.h)
+add_executable(jack_straws src/mid_level/jack_straws.cpp include/mid_level/jack_straws.h include/mid_level/point.h)
