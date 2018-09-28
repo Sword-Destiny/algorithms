@@ -47,3 +47,4 @@ add_executable(dual_core_cpu src/mid_level/dual_core_cpu.cpp include/mid_level/d
 add_executable(farm_tour src/mid_level/farm_tour.cpp include/mid_level/farm_tour.h)
 add_executable(the_windys src/mid_level/the_windys.cpp include/mid_level/the_windys.h)
 add_executable(jack_straws src/mid_level/jack_straws.cpp include/mid_level/jack_straws.h include/mid_level/point.h)
+add_executable(no_cheating src/gcj/no_cheating.cpp include/gcj/no_cheating.h)
