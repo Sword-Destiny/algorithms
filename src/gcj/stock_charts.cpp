@@ -22,4 +22,5 @@ int main() {
     };
     int ans = stock_charts(n, k, p);
     cout << "stock_charts res : " << ans << endl;
+    return 0;
 }
