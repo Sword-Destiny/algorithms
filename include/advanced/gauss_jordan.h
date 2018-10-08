@@ -15,6 +15,12 @@ using std::abs;
 using std::swap;
 using std::vector;
 
+/**
+ * 高斯消元法求解线性方程组
+ * @param A 系数矩阵
+ * @param b 方程组右半部
+ * @return 解向量
+ */
 vector<double> gauss_jordan(const matrix<double> &A, const vector<double> &b) {
     int n = A.row;
     matrix<double> B(n, n + 1);
