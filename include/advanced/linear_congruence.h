@@ -12,7 +12,16 @@ using std::vector;
 using std::pair;
 using std::make_pair;
 
-// 求解线性同余方程组
+/**
+ * 求解线性同余方程组
+ * a[i] * x ≡ b[i] (mod m[i])
+ * 求x,可能无解,即返回(0,-1),有解即有无数解,返回一个数对(p,q),x≡p(mod q)
+ *
+ * @param A
+ * @param B
+ * @param M
+ * @return
+ */
 pair<int, int> linear_congruence(const vector<int> &A, const vector<int> &B, const vector<int> &M) {
     int x = 0, m = 1;
     for (int i = 0; i < A.size(); ++i) {

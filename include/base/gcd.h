@@ -5,6 +5,15 @@
 #ifndef ALGORITHMS_GCD_H
 
 template<typename T>
+/**
+ *
+ * 求a和b的最大公约数
+ *
+ * @tparam T
+ * @param a
+ * @param b
+ * @return
+ */
 T gcd(T a, T b) {
     if (b == 0) {
         return a;
@@ -13,6 +22,17 @@ T gcd(T a, T b) {
 }
 
 template<typename T>
+/**
+ * 扩展gcd算法
+ * ax+by=1,已知a和b,求x和y
+ *
+ * @tparam T
+ * @param a
+ * @param b
+ * @param x
+ * @param y
+ * @return
+ */
 T extgcd(T a, T b, T &x, T &y) {
     T d = a;
     if (b != 0) {
@@ -25,13 +45,26 @@ T extgcd(T a, T b, T &x, T &y) {
     return d;
 }
 
+/**
+ * 求a对m的逆元b, a≡b(mod m)
+ *
+ * @param a
+ * @param m
+ * @return
+ */
 int mod_inverse(int a, int m) {
     int x, y;
     extgcd(a, m, x, y);
     return (m + x % m) % m;
 }
 
-// 求欧拉函数值O(√n)
+/**
+ * 求n的欧拉函数值,时间复杂度O(√n)
+ * 即不大于n的自然数中与n互素的数的数量
+ *
+ * @param n
+ * @return
+ */
 int euler_phi(int n) {
     int res = n;
     for (int i = 2; i * i < n; ++i) {
@@ -46,7 +79,12 @@ int euler_phi(int n) {
     return res;
 }
 
-// 用埃氏筛法在O(n)的时间内筛选出欧拉函数值表
+/**
+ * 用埃氏筛法在O(n)的时间内筛选出从0到n-1的欧拉函数值表
+ *
+ * @param n
+ * @param euler
+ */
 void euler_phi2(int n, int *euler) {
     for (int i = 0; i < n; ++i) {
         euler[i] = i;
