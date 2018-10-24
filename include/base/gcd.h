@@ -13,7 +13,7 @@ T gcd(T a, T b) {
 }
 
 template<typename T>
-T extgcd(int a, int b, int &x, int &y) {
+T extgcd(T a, T b, T &x, T &y) {
     T d = a;
     if (b != 0) {
         d = extgcd(b, a % b, y, x);
@@ -23,6 +23,12 @@ T extgcd(int a, int b, int &x, int &y) {
         y = 0;
     }
     return d;
+}
+
+int mod_inverse(int a, int m) {
+    int x, y;
+    extgcd(a, m, x, y);
+    return (m + x % m) % m;
 }
 
 #define ALGORITHMS_GCD_H
