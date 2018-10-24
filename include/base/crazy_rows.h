@@ -52,7 +52,7 @@ int crazy_rows(int n, int **m) {
 		if (min_i != 0) {
 			int swap_index = min_i + i;
 			for (int s = swap_index; s > i; --s) {
-				cout << "swap : " << (s - 1) << " <-> " << s << endl;//TODO : comment
+				// cout << "swap : " << (s - 1) << " <-> " << s << endl;//NOTE : comment
 				swap_num++;
 				swap(last_none_zero[s], last_none_zero[s - 1]);
 				swap(m[s], m[s - 1]);
