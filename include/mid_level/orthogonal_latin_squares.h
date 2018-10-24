@@ -19,9 +19,7 @@ using std::vector;
  * @param unselected 未选择的数
  * @param u 未选择的数量
  */
-void
-full_arrangement(bool *cover, int i, matrix<int> &m, vector<darray<int>> &transversal, int *selected, int s,
-                 const int *unselected, int u) {
+void full_arrangement(bool *cover, int i, matrix<int> &m, vector<darray<int>> &transversal, int *selected, int s, const int *unselected, int u) {
     if (u == 0) {
         // selected[a] == b意味着,所求的矩阵的第b行第a列为i
         // 比如 <0,1,2,3,5,6,9,8,4,7> 意味着
