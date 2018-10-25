@@ -53,3 +53,4 @@ add_executable(gauss_jordan src/advanced/gauss_jordan.cpp include/advanced/gauss
 add_executable(gcd src/base/gcd.cpp include/base/gcd.h)
 add_executable(linear_congruence src/advanced/linear_congruence.cpp include/advanced/linear_congruence.h)
 add_executable(inclusion_exclusion_principle src/advanced/inclusion_exclusion_principle.cpp include/advanced/inclusion_exclusion_principle.h include/base/print_utilitys.h)
+add_executable(moebius src/advanced/moebius.cpp include/advanced/moebius.h)
