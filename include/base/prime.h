@@ -11,10 +11,18 @@
 using std::map;
 using std::sqrt;
 using std::vector;
+using std::round;
 
-bool is_prime(int n) {
-    auto sn = (int) sqrt(n);
-    for (int i = 0; i <= sn; ++i) {
+template <typename T>
+/**
+ * 判断一个数是否是素数
+ * @tparam T
+ * @param n
+ * @return
+ */
+bool is_prime(T n) {
+    auto sn = (T) round(sqrt(n));
+    for (T i = 0; i <= sn; ++i) {
         if (n % i == 0) {
             return false;
         }
@@ -22,15 +30,16 @@ bool is_prime(int n) {
     return n != 1;
 }
 
+template <typename T>
 /**
  * 求约数
  * @param n 数
  * @return 约数
  */
-vector<int> divisor(int n) {
-    auto sn = (int) sqrt(n);
-    vector<int> res;
-    for (int i = 1; i < sn; ++i) {
+vector<T> divisor(T n) {
+    auto sn = (T) round(sqrt(n));
+    vector<T> res;
+    for (T i = 1; i <= sn; ++i) {
         if (n % i == 0) {
             res.emplace_back(i);
             if (i != n / i) {
@@ -41,15 +50,16 @@ vector<int> divisor(int n) {
     return res;
 }
 
+template <typename T>
 /**
  * 因式分解
  * @param n 数
  * @return 因式分解
  */
-map<int, int> prime_factor(int n) {
-    map<int, int> res;
-    auto sn = (int) sqrt(n);
-    for (int i = 2; i <= sn; ++i) {
+map<T, T> prime_factor(T n) {
+    map<T, T> res;
+    auto sn = (T) round(sqrt(n));
+    for (T i = 2; i <= sn; ++i) {
         while (n % i == 0) {
             ++res[i];
             n /= i;

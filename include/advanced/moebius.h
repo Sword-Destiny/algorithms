@@ -7,31 +7,10 @@
 #include <vector>
 #include <map>
 #include <cmath>
+#include "../base/mod.h"
 
 using std::map;
 using std::vector;
-
-template<typename T>
-/**
- * 取模的幂运算x的n次方
- *
- * @tparam T
- * @param x
- * @param n
- * @param mod
- * @return
- */
-T mod_pow(T x, T n, T mod) {
-    T res = 1;
-    while (n > 0) {
-        if (n & 1) {
-            res = res * x % mod;
-        }
-        x = x * x % mod;
-        n >>= 1;
-    }
-    return res;
-}
 
 /**
  * 求n的所有的质因数的莫比乌斯函数值

@@ -8,6 +8,7 @@ using std::cout;
 using std::endl;
 
 #include "../../include/base/gcd.h"
+#include "../../include/base/mod.h"
 
 int main() {
     int a = 5;

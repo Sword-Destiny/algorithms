@@ -5,6 +5,7 @@
 #ifndef ALGORITHMS_LINEAR_CONGRUENCE_H
 
 #include "../base/gcd.h"
+#include "../base/mod.h"
 #include <utility>
 #include <vector>
 
