@@ -55,3 +55,4 @@ add_executable(linear_congruence src/advanced/linear_congruence.cpp include/adva
 add_executable(inclusion_exclusion_principle src/advanced/inclusion_exclusion_principle.cpp include/advanced/inclusion_exclusion_principle.h include/base/print_utilitys.h)
 add_executable(moebius src/advanced/moebius.cpp include/advanced/moebius.h)
 add_executable(color_stone src/advanced/color_stone.cpp include/advanced/color_stone.h)
+add_executable(take_coin_n_ai_last_win src/win_game/take_coin_n_ai_last_win.cpp include/win_game/take_coin_n_ai_last_win.h)
