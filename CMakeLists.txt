@@ -5,6 +5,9 @@ set(CMAKE_CXX_STANDARD 11)
 include_directories(include)
 add_definitions(-O3)
 
+include(TestBigEndian)
+test_big_endian(ALGORITHM_IS_BIG_ENDIAN)
+
 add_executable(dinic src/mid_level/dinic.cpp include/mid_level/dinic.h)
 add_executable(ford_fulkerson src/mid_level/ford_fulkerson.cpp include/mid_level/ford_fulkerson.h)
 add_executable(traveller_problem src/mid_level/traveller_problem.cpp include/mid_level/traveller_problem.h)
@@ -56,3 +59,4 @@ add_executable(inclusion_exclusion_principle src/advanced/inclusion_exclusion_pr
 add_executable(moebius src/advanced/moebius.cpp include/advanced/moebius.h)
 add_executable(color_stone src/advanced/color_stone.cpp include/advanced/color_stone.h)
 add_executable(take_coin_n_ai_last_win src/win_game/take_coin_n_ai_last_win.cpp include/win_game/take_coin_n_ai_last_win.h)
+add_executable(euclids_game src/win_game/euclid's_game.cpp include/win_game/euclid's_game.h)
