@@ -22,7 +22,7 @@ template <typename T>
  */
 bool is_prime(T n) {
     auto sn = (T) round(sqrt(n));
-    for (T i = 0; i <= sn; ++i) {
+    for (T i = 2; i <= sn; ++i) {
         if (n % i == 0) {
             return false;
         }

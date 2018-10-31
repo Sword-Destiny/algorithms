@@ -17,6 +17,7 @@ int main() {
     }
     cout << a[n - 1] << endl;
     int result = longest_increasing_subsequence_efficient(a, n);
-    cout << "longest increasing subsequence: " << result << endl;
+    int result2 = longest_increasing_subsequence_efficient(a, n);
+    cout << "longest increasing subsequence: " << result << " = " << result2 << endl;
     return 0;
 }

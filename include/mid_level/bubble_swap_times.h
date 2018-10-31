@@ -13,7 +13,7 @@
  * @return 次数
  */
 long long bubble_swap_times(int n,int *arr){
-    bi_tree<int> bt(n,n);
+    bi_tree<int> bt = binary_indexed_tree<int>(n,n);
     long long answer = 0;
     for (int i = 0; i < n; ++i) {
         answer +=i - bt.sum(arr[i]);

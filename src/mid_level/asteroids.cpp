@@ -7,7 +7,7 @@
 using std::cout;
 using std::endl;
 
-#include "mid_level/asteroids.h"
+#include "../../include/mid_level/asteroids.h"
 
 int main() {
     int row = 4;

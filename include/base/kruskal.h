@@ -33,7 +33,7 @@ void kruskal(int **G, int n, int &min_cost, map_edge *res_edges) {
         }
     }
     sort(es, es + edge_num);
-    union_set uf(n);
+    union_set uf = union_find_set(n);
     min_cost = 0;
     for (int i = 0; i < edge_num; ++i) {
         map_edge e = es[i];
