@@ -63,3 +63,4 @@ add_executable(euclids_game src/win_game/euclid's_game.cpp include/win_game/eucl
 add_executable(nim src/win_game/nim.cpp include/win_game/nim.h)
 add_executable(array_test src/base/array_test.cpp include/mid_level/array.h)
 add_executable(segment_tree_test src/mid_level/segment_tree_test.cpp include/mid_level/segment_tree.h)
+add_executable(staircase_nim src/win_game/staircase_nim.cpp include/win_game/staircase_nim.h)
