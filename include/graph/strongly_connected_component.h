@@ -19,9 +19,9 @@ using std::memset;
 void rdfs(int &v, int k, bool *used, vector<int> *rG, int *cmp) {
     used[v] = true;
     cmp[v] = k;
-    for (int from = 0; from < rG[v].size(); ++from) {
-        if (!used[rG[v][from]]) {
-            rdfs(rG[v][from], k, used, rG, cmp);
+    for (int &from:rG[v]) {
+        if (!used[from]) {
+            rdfs(from, k, used, rG, cmp);
         }
     }
 }
@@ -31,9 +31,9 @@ void rdfs(int &v, int k, bool *used, vector<int> *rG, int *cmp) {
  */
 void dfs(int &v, bool *used, vector<int> *G, vector<int> &vs) {
     used[v] = true;
-    for (int to = 0; to < G[v].size(); ++to) {
-        if (!used[G[v][to]]) {
-            dfs(G[v][to], used, G, vs);
+    for (int &to :G[v]) {
+        if (!used[to]) {
+            dfs(to, used, G, vs);
         }
     }
     vs.push_back(v);
@@ -44,8 +44,7 @@ void dfs(int &v, bool *used, vector<int> *G, vector<int> &vs) {
  */
 void reverse_edges(int V, vector<int> *G, vector<int> *rG) {
     for (int from = 0; from < V; ++from) {
-        for (int j = 0; j < G[from].size(); ++j) {
-            int to = G[from][j];
+        for (int &to:G[from]) {
             rG[to].push_back(from);
         }
     }
