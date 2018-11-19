@@ -41,7 +41,7 @@ public:
      */
     tree(const tree &t) : data(t.data), parent(NULL), children() {
         for (tree *child:t.children) {
-            tree *c = child->copy();
+            tree *c = child->deep_copy();
             c->parent = this;
             children.push_back(c);
         }
@@ -55,7 +55,7 @@ public:
         this->data = t.data;
         this->children = list<T>();
         for (tree *child:t.children) {
-            tree *c = child->copy();
+            tree *c = child->deep_copy();
             c->parent = this;
             children.push_back(c);
         }
@@ -68,10 +68,21 @@ public:
     /**
      * 递归释放内存
      */
-    virtual void release() const {
+    virtual void deep_release() const {
         for (tree *child:children) {
-            child->release();
+            child->deep_release();
         }
+        delete this;
+    }
+
+    /**
+     * 递归释放内存,并且可以为内部的data指定释放内存的函数
+     */
+    virtual void deep_data_release(void (*data_release)(T data)) const {
+        for (tree *child:children) {
+            child->deep_data_release(data_release);
+        }
+        data_release(data);
         delete this;
     }
 
@@ -96,10 +107,10 @@ public:
      * 深复制函数
      * 根节点的parent是不会复制的
      */
-    tree *copy() const {
+    tree *deep_copy() const {
         tree *res = new tree(data);
         for (tree *child:children) {
-            tree *c = child->copy();
+            tree *c = child->deep_copy();
             c->parent = res;
             res->children.push_back(c);
         }
