@@ -30,12 +30,26 @@ int main() {
     cout << lowest_common_ancestor(root, t5, t6)->data << endl; // 5
     cout << lowest_common_ancestor(root, t5, toor) << endl; // 0 (NULL)
 
-    root->deep_release(); // deep_release会自动释放子节点内存
-    toor->deep_release();
 
     const int *a = new int[8]{0}; // 如果调用deep_data_release甚至都不需要delete[] a;
     auto *dt = new tree<const int *>(a);
     dt->deep_data_release(array_release);
+
+    tree<int> *ct = root->deep_copy();
+    ct->deep_release();
+
+    tree<int> cct = *root;
+//    cct.child_deep_release();
+    cct = *root;
+    cct.child_deep_release();
+
+    const int *p = new int[5]{0};
+    tree<const int *> pit(p);
+    pit.child_deep_data_release(array_release);
+    delete[] p; // 注意child deep data release不会释放自己
+
+    root->deep_release(); // deep_release会自动释放子节点内存
+    toor->deep_release();
 
     return 0;
 }

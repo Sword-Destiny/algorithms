@@ -51,9 +51,12 @@ public:
      * 深复制
      */
     tree &operator=(const tree &t) {
+        for (tree *child:children) {
+            child->deep_release();
+        }
         this->parent = NULL;
         this->data = t.data;
-        this->children = list<T>();
+        this->children.clear();
         for (tree *child:t.children) {
             tree *c = child->deep_copy();
             c->parent = this;
@@ -84,6 +87,26 @@ public:
         }
         data_release(data);
         delete this;
+    }
+
+    /**
+     * 只释放child，不释放自己
+     */
+    virtual void child_deep_release() {
+        for (tree *child:children) {
+            child->deep_release();
+        }
+        children.clear();
+    }
+
+    /**
+     * 只释放child，不释放自己
+     */
+    virtual void child_deep_data_release(void (*data_release)(T data)) {
+        for (tree *child:children) {
+            child->deep_data_release(data_release);
+        }
+        children.clear();
     }
 
     /**
