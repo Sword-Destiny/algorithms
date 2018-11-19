@@ -66,3 +66,4 @@ add_executable(segment_tree_test src/mid_level/segment_tree_test.cpp include/mid
 add_executable(staircase_nim src/win_game/staircase_nim.cpp include/win_game/staircase_nim.h)
 add_executable(grundy_nim src/win_game/grundy_nim.cpp include/win_game/grundy_nim.h)
 add_executable(strongly_connected_component src/graph/strongly_connected_component.cpp include/graph/strongly_connected_component.h)
+add_executable(lowest_common_ancestor src/graph/lowest_common_ancestor.cpp include/graph/lowest_common_ancestor.h include/graph/tree.h)

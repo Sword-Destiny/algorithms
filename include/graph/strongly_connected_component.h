@@ -6,11 +6,9 @@
 #define ALGORITHMS_STRONGLY_CONNECTED_COMPONENT_H
 
 #include <vector>
-
-using std::vector;
-
 #include <cstring>
 
+using std::vector;
 using std::memset;
 
 /**
@@ -36,7 +34,7 @@ void dfs(int &v, bool *used, vector<int> *G, vector<int> &vs) {
             dfs(to, used, G, vs);
         }
     }
-    vs.push_back(v);
+    vs.emplace_back(v);
 }
 
 /**
@@ -45,7 +43,7 @@ void dfs(int &v, bool *used, vector<int> *G, vector<int> &vs) {
 void reverse_edges(int V, vector<int> *G, vector<int> *rG) {
     for (int from = 0; from < V; ++from) {
         for (int &to:G[from]) {
-            rG[to].push_back(from);
+            rG[to].emplace_back(from);
         }
     }
 }
