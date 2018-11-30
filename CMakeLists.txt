@@ -68,3 +68,4 @@ add_executable(grundy_nim src/win_game/grundy_nim.cpp include/win_game/grundy_ni
 add_executable(strongly_connected_component src/graph/strongly_connected_component.cpp include/graph/strongly_connected_component.h)
 add_executable(lowest_common_ancestor src/graph/lowest_common_ancestor.cpp include/graph/lowest_common_ancestor.h include/graph/tree.h)
 add_executable(largest_rectangle_in_histogram src/advanced/largest_rectangle_in_histogram.cpp include/advanced/largest_rectangle_in_histogram.h)
+add_executable(slice_min src/advanced/slice_min.cpp include/advanced/slice_min.h)
