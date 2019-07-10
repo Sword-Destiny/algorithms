@@ -1,1 +1,0 @@
-/usr/bin/c++  -O3 -DNDEBUG   CMakeFiles/expedition.dir/src/base/expedition.cpp.o  -o expedition 

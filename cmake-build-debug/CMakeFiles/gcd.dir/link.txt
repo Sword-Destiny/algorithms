@@ -1,1 +1,0 @@
-/usr/bin/c++  -g   CMakeFiles/gcd.dir/src/base/gcd.cpp.o  -o gcd 

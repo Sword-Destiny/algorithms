@@ -1,1 +1,0 @@
-/usr/bin/c++  -g   CMakeFiles/array_test.dir/src/base/array_test.cpp.o  -o array_test 

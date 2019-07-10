@@ -1,1 +1,0 @@
-/usr/bin/c++  -g   CMakeFiles/orthogonal_latin_squares.dir/src/mid_level/orthogonal_latin_quares.cpp.o  -o orthogonal_latin_squares 

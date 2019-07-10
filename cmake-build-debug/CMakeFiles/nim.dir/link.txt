@@ -1,1 +1,0 @@
-/usr/bin/c++  -g   CMakeFiles/nim.dir/src/win_game/nim.cpp.o  -o nim 

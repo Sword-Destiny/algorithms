@@ -1,1 +1,0 @@
-/usr/bin/c++  -g   CMakeFiles/segment_tree_test.dir/src/mid_level/segment_tree_test.cpp.o  -o segment_tree_test 

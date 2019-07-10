@@ -1,1 +1,0 @@
-/usr/bin/c++  -O3 -DNDEBUG   CMakeFiles/bellman_ford.dir/src/base/bellman_ford.cpp.o  -o bellman_ford 

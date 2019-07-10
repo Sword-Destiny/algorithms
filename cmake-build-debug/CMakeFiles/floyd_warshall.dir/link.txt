@@ -1,1 +1,0 @@
-/usr/bin/c++  -g   CMakeFiles/floyd_warshall.dir/src/base/floyd_warshall.cpp.o  -o floyd_warshall 

@@ -1,1 +1,0 @@
-/usr/bin/c++  -g   CMakeFiles/matrix_power_series.dir/src/mid_level/matrix_power_series.cpp.o  -o matrix_power_series 

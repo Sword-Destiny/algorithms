@@ -1,1 +1,0 @@
-/usr/bin/c++  -g   "CMakeFiles/euclids_game.dir/src/win_game/euclid's_game.cpp.o"  -o euclids_game 

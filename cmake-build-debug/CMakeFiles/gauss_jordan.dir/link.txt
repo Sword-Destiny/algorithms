@@ -1,1 +1,0 @@
-/usr/bin/c++  -g   CMakeFiles/gauss_jordan.dir/src/advanced/gauss_jordan.cpp.o  -o gauss_jordan 

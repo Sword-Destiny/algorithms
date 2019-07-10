@@ -1,1 +1,0 @@
-/usr/bin/c++  -g   CMakeFiles/strongly_connected_component.dir/src/graph/strongly_connected_component.cpp.o  -o strongly_connected_component 

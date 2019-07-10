@@ -1,1 +1,0 @@
-/usr/bin/c++  -O3 -DNDEBUG   CMakeFiles/staircase_nim.dir/src/win_game/staircase_nim.cpp.o  -o staircase_nim 

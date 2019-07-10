@@ -1,1 +1,0 @@
-/usr/bin/c++  -g   CMakeFiles/asteroids.dir/src/mid_level/asteroids.cpp.o  -o asteroids 

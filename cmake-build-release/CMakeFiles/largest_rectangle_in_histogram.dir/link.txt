@@ -1,1 +1,0 @@
-/usr/bin/c++  -O3 -DNDEBUG   CMakeFiles/largest_rectangle_in_histogram.dir/src/advanced/largest_rectangle_in_histogram.cpp.o  -o largest_rectangle_in_histogram 

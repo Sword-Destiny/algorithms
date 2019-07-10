@@ -1,1 +1,0 @@
-/usr/bin/c++  -O3 -DNDEBUG   CMakeFiles/dinic.dir/src/mid_level/dinic.cpp.o  -o dinic 

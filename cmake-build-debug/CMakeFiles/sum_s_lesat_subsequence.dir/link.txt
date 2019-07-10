@@ -1,1 +1,0 @@
-/usr/bin/c++  -g   CMakeFiles/sum_s_lesat_subsequence.dir/src/mid_level/sum_s_lesat_subsequence.cpp.o  -o sum_s_lesat_subsequence 

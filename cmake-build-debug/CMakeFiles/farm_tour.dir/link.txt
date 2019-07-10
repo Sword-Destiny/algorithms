@@ -1,1 +1,0 @@
-/usr/bin/c++  -g   CMakeFiles/farm_tour.dir/src/mid_level/farm_tour.cpp.o  -o farm_tour 

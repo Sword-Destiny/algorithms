@@ -1,1 +1,0 @@
-/usr/bin/c++  -g   CMakeFiles/traveller_problem.dir/src/mid_level/traveller_problem.cpp.o  -o traveller_problem 

@@ -1,1 +1,0 @@
-/usr/bin/c++  -g   CMakeFiles/cable_master.dir/src/mid_level/cable_master.cpp.o  -o cable_master 

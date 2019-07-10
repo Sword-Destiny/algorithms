@@ -1,1 +1,0 @@
-/usr/bin/c++  -O3 -DNDEBUG   CMakeFiles/bribe_prisoners.dir/src/base/bribe_prisoners.cpp.o  -o bribe_prisoners 

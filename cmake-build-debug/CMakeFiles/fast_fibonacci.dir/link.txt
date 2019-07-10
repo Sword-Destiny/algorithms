@@ -1,1 +1,0 @@
-/usr/bin/c++  -g   CMakeFiles/fast_fibonacci.dir/src/mid_level/fast_fibonacci.cpp.o  -o fast_fibonacci 

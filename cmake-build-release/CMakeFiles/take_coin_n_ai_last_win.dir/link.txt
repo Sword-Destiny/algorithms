@@ -1,1 +1,0 @@
-/usr/bin/c++  -O3 -DNDEBUG   CMakeFiles/take_coin_n_ai_last_win.dir/src/win_game/take_coin_n_ai_last_win.cpp.o  -o take_coin_n_ai_last_win 

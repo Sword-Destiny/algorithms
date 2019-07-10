@@ -1,1 +1,0 @@
-/usr/bin/c++  -g   CMakeFiles/crazy_rows.dir/src/base/crazy_rows.cpp.o  -o crazy_rows 

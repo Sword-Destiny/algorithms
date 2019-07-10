@@ -1,1 +1,0 @@
-/usr/bin/c++  -O3 -DNDEBUG   CMakeFiles/gcd.dir/src/base/gcd.cpp.o  -o gcd 

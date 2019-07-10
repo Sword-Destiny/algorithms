@@ -1,1 +1,0 @@
-/usr/bin/c++  -g   CMakeFiles/stock_charts.dir/src/gcj/stock_charts.cpp.o  -o stock_charts 

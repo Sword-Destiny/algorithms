@@ -1,1 +1,0 @@
-/usr/bin/c++  -g   CMakeFiles/fast_pow.dir/src/base/fast_pow.cpp.o  -o fast_pow 

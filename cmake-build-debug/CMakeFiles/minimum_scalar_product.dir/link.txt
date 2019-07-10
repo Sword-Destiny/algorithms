@@ -1,1 +1,0 @@
-/usr/bin/c++  -g   CMakeFiles/minimum_scalar_product.dir/src/base/minimum_scalar_product.cpp.o  -o minimum_scalar_product 
