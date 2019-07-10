@@ -1,0 +1,1 @@
+/usr/bin/c++  -g   CMakeFiles/conscription.dir/src/base/conscription.cpp.o  -o conscription 

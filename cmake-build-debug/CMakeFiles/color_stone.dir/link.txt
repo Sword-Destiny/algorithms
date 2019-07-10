@@ -1,0 +1,1 @@
+/usr/bin/c++  -g   CMakeFiles/color_stone.dir/src/advanced/color_stone.cpp.o  -o color_stone 

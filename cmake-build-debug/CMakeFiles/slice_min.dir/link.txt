@@ -1,0 +1,1 @@
+/usr/bin/c++  -g   CMakeFiles/slice_min.dir/src/advanced/slice_min.cpp.o  -o slice_min 

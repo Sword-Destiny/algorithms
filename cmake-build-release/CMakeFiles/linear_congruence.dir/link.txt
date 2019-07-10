@@ -1,0 +1,1 @@
+/usr/bin/c++  -O3 -DNDEBUG   CMakeFiles/linear_congruence.dir/src/advanced/linear_congruence.cpp.o  -o linear_congruence 

@@ -1,0 +1,1 @@
+/usr/bin/c++  -g   CMakeFiles/dining.dir/src/mid_level/dining.cpp.o  -o dining 

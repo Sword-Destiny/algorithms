@@ -1,0 +1,4 @@
+/usr/bin/cmake -DCMAKE_BUILD_TYPE=Release -G "CodeBlocks - Unix Makefiles" /mnt/d/Mirror/algorithms
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /mnt/d/Mirror/algorithms/cmake-build-release

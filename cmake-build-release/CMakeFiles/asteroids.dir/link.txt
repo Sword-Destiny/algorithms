@@ -1,0 +1,1 @@
+/usr/bin/c++  -O3 -DNDEBUG   CMakeFiles/asteroids.dir/src/mid_level/asteroids.cpp.o  -o asteroids 

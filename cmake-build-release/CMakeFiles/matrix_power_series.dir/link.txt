@@ -1,0 +1,1 @@
+/usr/bin/c++  -O3 -DNDEBUG   CMakeFiles/matrix_power_series.dir/src/mid_level/matrix_power_series.cpp.o  -o matrix_power_series 

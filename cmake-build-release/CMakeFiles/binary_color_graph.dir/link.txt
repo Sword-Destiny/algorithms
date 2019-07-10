@@ -1,0 +1,1 @@
+/usr/bin/c++  -O3 -DNDEBUG   CMakeFiles/binary_color_graph.dir/src/base/bianry_color_graph.cpp.o  -o binary_color_graph 

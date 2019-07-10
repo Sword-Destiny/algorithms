@@ -1,0 +1,1 @@
+/usr/bin/c++  -g   CMakeFiles/grundy_nim.dir/src/win_game/grundy_nim.cpp.o  -o grundy_nim 

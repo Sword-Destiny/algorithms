@@ -1,0 +1,1 @@
+/usr/bin/c++  -O3 -DNDEBUG   CMakeFiles/array_test.dir/src/base/array_test.cpp.o  -o array_test 

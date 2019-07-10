@@ -1,0 +1,1 @@
+/usr/bin/c++  -O3 -DNDEBUG   CMakeFiles/four_sum_zero.dir/src/mid_level/four_sum_zero.cpp.o  -o four_sum_zero 
