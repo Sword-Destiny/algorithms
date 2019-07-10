@@ -32,8 +32,8 @@
 *.app
 
 .idea/
-.vs
-.vscode
+.vs/
+.vscode/
 
 cmake-build-debug/
 cmake-build-release/
