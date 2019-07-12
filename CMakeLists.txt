@@ -8,6 +8,7 @@ add_definitions(-O0)
 include(TestBigEndian)
 test_big_endian(ALGORITHM_IS_BIG_ENDIAN)
 
+add_executable(crack_password src/mid_level/crack_password.cpp)
 add_executable(dinic src/mid_level/dinic.cpp include/mid_level/dinic.h)
 add_executable(ford_fulkerson src/mid_level/ford_fulkerson.cpp include/mid_level/ford_fulkerson.h)
 add_executable(traveller_problem src/mid_level/traveller_problem.cpp include/mid_level/traveller_problem.h)
