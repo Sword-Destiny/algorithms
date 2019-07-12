@@ -10,10 +10,11 @@
 using namespace std;
 
 /*
- *破解密码：
- *将有序的数字密码转为英文单词，随后调整顺序，改变大小写：
- *比如1233，变为onetwothreethree或者EnoOwTtthhrreeee
- *现在输入onetwothreethree或者EnoOwTtthhrreeee，要求破解出原密码
+ * 华为终端os部门研究生招聘机试题第三题
+ * 破解密码：
+ * 将有序的数字密码转为英文单词，随后调整顺序，改变大小写：
+ * 比如1233，变为onetwothreethree或者EnoOwTtthhrreeee，
+ * 现在输入onetwothreethree或者EnoOwTtthhrreeee，要求破解出原密码。
  */
 int main() {
     string s;
