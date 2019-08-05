@@ -4,8 +4,6 @@
 
 #include <iostream>
 #include <string>
-#include <cstring>
-#include <vector>
 
 using namespace std;
 
@@ -25,7 +23,7 @@ int main() {
     }
     for (char & i : s) {
         if (i <= 'Z' && i >= 'A') {
-            i = 'a' + i - 'A';
+            i = (char)('a' + i - 'A');
         }
         if (i <= 'z' && i >= 'a') {
             count[i]++;
