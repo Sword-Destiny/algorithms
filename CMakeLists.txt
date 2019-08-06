@@ -8,6 +8,7 @@ add_definitions(-O0)
 include(TestBigEndian)
 test_big_endian(ALGORITHM_IS_BIG_ENDIAN)
 
+add_executable(exchange_largest_number include/hiho/exchange_largest_number.h src/hiho/exchange_largest_number.cpp)
 add_executable(crack_password src/mid_level/crack_password.cpp)
 add_executable(dinic src/mid_level/dinic.cpp include/mid_level/dinic.h)
 add_executable(ford_fulkerson src/mid_level/ford_fulkerson.cpp include/mid_level/ford_fulkerson.h)
