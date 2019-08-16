@@ -8,6 +8,8 @@ add_definitions(-O0)
 include(TestBigEndian)
 test_big_endian(ALGORITHM_IS_BIG_ENDIAN)
 
+add_executable(quad_tree src/hiho/quad_tree.cpp include/hiho/quad_tree.h)
+add_executable(old_number src/hiho/old_number.cpp include/hiho/old_number.h)
 add_executable(ordered_travel src/hiho/ordered_travel.cpp include/hiho/ordered_travel.h)
 add_executable(username src/hiho/username.cpp include/hiho/username.h)
 add_executable(exchange_largest_number include/hiho/exchange_largest_number.h src/hiho/exchange_largest_number.cpp)
