@@ -31,12 +31,10 @@ using namespace std;
  * 样例输出
  * 12
  * 80
- * @param numbers
- * @return
  */
 long long max_multiply(vector<long long> &large_numbers) {
     sort(large_numbers.begin(), large_numbers.end());
-    // TODO 现在这个算法会超时
+    // TODO i&j肯定小于等于min(i,j)，为了让i&j更大，i和j的二进制都是1的最高的一位，越高则越大，最大值一定是排序后的相邻两个数，这一点，还不知道怎么推出来的
     long long max_logic_and = 0;
     for (int i = 0; i < large_numbers.size() - 1; ++i) {
         int j = i + 1;

@@ -20,5 +20,5 @@ int main() {
             unknowns.push_back(i);
         }
     }
-    old_number(s, unknowns, x, n, y);
+    old_number(s, n, unknowns, x, y);
 }

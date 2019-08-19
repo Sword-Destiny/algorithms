@@ -15,7 +15,7 @@
 using namespace std;
 #define MAX_N 201
 
-int divide_big_number(char *s, int n, int x);
+int compute_remainder(char *s, int n, int x);
 
 /**
  * 描述
@@ -31,13 +31,9 @@ int divide_big_number(char *s, int n, int x);
  * 12 0
  * 样例输出
  * 1044
- * @param s
- * @param unknown_number_index
- * @param x
- * @param y
  */
-void old_number(char *s, vector<int> unknown_number_index, const int x, int n, const int y) {
-    // dp的思想：
+void old_number(char *s, int n, vector<int> unknown_number_index, const int x, const int y) {
+    // 数位dp的思想：
     // 如果第i个未知数字等于0的时候余数是r，后面第i+1到n-1的未知数字所有的情况都尝试了都没有成功，
     // 当第i个未知数字尝试为1的时候，如果余数还是r，那后面的数字任何情况都一定不能成功。
     // dp数组中第一个下标表示遍历到第i位，第二个下标表示余数
@@ -57,12 +53,12 @@ void old_number(char *s, vector<int> unknown_number_index, const int x, int n, c
         for (int i = 0; i < unknown_number_index.size(); ++i) {
             s[unknown_number_index[i]] = try_number[i] + '0';
         }
-        char try_s[MAX_N];
+        char full_number[MAX_N];
         for (int i = 0; i < n + 1; ++i) {
-            try_s[i] = s[i] - '0';
+            full_number[i] = s[i] - '0';
         }
         // 计算余数
-        int remainder = divide_big_number(try_s, n, x);
+        int remainder = compute_remainder(full_number, n, x);
         if (remainder == y) {
             // 输出结果
             cout << s << endl;
@@ -92,12 +88,9 @@ void old_number(char *s, vector<int> unknown_number_index, const int x, int n, c
 }
 
 /**
- * 大数除法求余数
- * @param s
- * @param x
- * @return
+ * 求余数
  */
-int divide_big_number(char *s, int n, const int x) {
+int compute_remainder(char *s, int n, const int x) {
     int remainder[n];
     memset(remainder, 0, sizeof(int) * n);
     remainder[0] = ((int) s[0]) % x;
