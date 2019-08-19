@@ -10,9 +10,10 @@
 #include <cstring>
 #include <vector>
 #include <cmath>
+#include <set>
 
 using namespace std;
-#define MAX_N 200
+#define MAX_N 201
 
 int divide_big_number(char *s, int n, int x);
 
@@ -31,105 +32,63 @@ int divide_big_number(char *s, int n, int x);
  * 样例输出
  * 1044
  * @param s
- * @param unknown
+ * @param unknown_number_index
  * @param x
  * @param y
  */
-void old_number(char *s, vector<int> unknown, const int x, const int y) {
-    int n = 0; // 数字长度
-    for (int si = 0; si < MAX_N; ++si) {
-        if (s[si] == '\0') {
-            n = si;
-            break;
-        }
+void old_number(char *s, vector<int> unknown_number_index, const int x, int n, const int y) {
+    // dp的思想：
+    // 如果第i个未知数字等于0的时候余数是r，后面第i+1到n-1的未知数字所有的情况都尝试了都没有成功，
+    // 当第i个未知数字尝试为1的时候，如果余数还是r，那后面的数字任何情况都一定不能成功。
+    // dp数组中第一个下标表示遍历到第i位，第二个下标表示余数
+    // 当然我的算法里面，实际上余数是偏移了1的，即我记录的是上一个余数，但是结果是一样的，因为余数是循环的。
+    // 如果严格的话，请将循环修改一下，先更新try_number，再计算余数。
+    bool dp[unknown_number_index.size()][x + 1];
+    for (int i = 0; i < unknown_number_index.size(); ++i) {
+        memset(dp[i], 0, sizeof(bool) * (x + 1));
     }
-    int try_number = 0;
-    int try_max = pow(10, unknown.size());
-    if (unknown[0] == 0 && n != 1) {
-        try_number += pow(10, unknown.size() - 1);
+    int try_number[unknown_number_index.size()];
+    memset(try_number, 0, sizeof(int) * unknown_number_index.size());
+    // 第一位一般不能为0，除非数字只有一位
+    if (unknown_number_index[0] == 0 && n != 1) {
+        try_number[0] = 1;
     }
-    for (; try_number < try_max; ++try_number) {
-        string tmp_str = "";
-        string try_str = to_string(try_number);
-        for (int i = 0; i < unknown.size() - try_str.size(); ++i) {
-            tmp_str.push_back('0');
-        }
-        tmp_str.append(try_str);
-        for (int i = 0; i < unknown.size(); ++i) {
-            s[unknown[i]] = tmp_str[i];
+    for (; try_number[0] < 10;) {
+        for (int i = 0; i < unknown_number_index.size(); ++i) {
+            s[unknown_number_index[i]] = try_number[i] + '0';
         }
         char try_s[MAX_N];
         for (int i = 0; i < n + 1; ++i) {
             try_s[i] = s[i] - '0';
         }
-        if (divide_big_number(try_s, n, x) == y) {
+        // 计算余数
+        int remainder = divide_big_number(try_s, n, x);
+        if (remainder == y) {
             // 输出结果
             cout << s << endl;
             return;
         }
+
+        // 更新try_number,除了第一位，其他的逢10进1，如果第一位加到10了，那么所有的尝试都结束了，循环也就该结束了
+        try_number[unknown_number_index.size() - 1]++;
+        for (int i = unknown_number_index.size() - 1; i >= 1; --i) {
+            if (try_number[i] == 10) {
+                try_number[i] = 0;
+                try_number[i - 1]++;
+            } else {
+                if (dp[i - 1][remainder]) {
+                    try_number[i] = 0;
+                    try_number[i - 1]++;
+                } else {
+                    if (remainder != x) {
+                        dp[i][remainder] = true;
+                    }
+                }
+                remainder = x; // 将remainder余数设置为无效
+            }
+        }
     }
     cout << "No solution" << endl;
-}
-
-/**
- * 大数减法,结果保留在s中
- * @param s
- * @param n
- * @param t
- * @param m
- * @return
- */
-void subtract_big_number(char *s, int &n, char *t, int m) {
-    int lend = 0; // 借位
-    for (int si = n - 1; si >= 0; --si) {
-        int ti = m - n + si;
-        int number_t = ti < 0 ? 0 : t[ti];
-        if (s[si] >= number_t + lend) {
-            s[si] = s[si] - number_t - lend;
-            lend = 0;
-        } else {
-            s[si] = s[si] + 10 - number_t - lend;
-            lend = 1;
-        }
-    }
-
-    // 如果前面减出来是0，那么结果要左移
-    int shift_len = n;
-    for (int si = 0; si < n; ++si) {
-        if (s[si] != 0) {
-            shift_len = si;
-            break;
-        }
-    }
-    for (int si = 0; si < n - shift_len; ++si) {
-        s[si] = s[si + shift_len];
-    }
-    n -= shift_len;
-    s[n] = '\0';
-}
-
-/**
- * 大数运算，大于等于判断
- * @param s
- * @param n
- * @param t
- * @param m
- * @return
- */
-bool large_equal(char *s, int n, char *t, int m) {
-    if (n > m) {
-        return true;
-    } else if (n < m) {
-        return false;
-    }
-    for (int i = 0; i < n; ++i) {
-        if (s[i] > t[i]) {
-            return true;
-        } else if (s[i] < t[i]) {
-            return false;
-        }
-    }
-    return true;
 }
 
 /**
@@ -139,36 +98,13 @@ bool large_equal(char *s, int n, char *t, int m) {
  * @return
  */
 int divide_big_number(char *s, int n, const int x) {
-    string tmp = to_string(x);
-    int m = tmp.length();
-    const char *st = tmp.c_str();
-    char t[MAX_N];
-    for (int i = 0; i < m; ++i) {
-        t[i] = st[i] - '0';
+    int remainder[n];
+    memset(remainder, 0, sizeof(int) * n);
+    remainder[0] = ((int) s[0]) % x;
+    for (int i = 1; i < n; ++i) {
+        remainder[i] = (remainder[i - 1] * 10 + s[i]) % x;
     }
-    t[m] = '\0';
-    while (large_equal(s, n, t, m)) {
-        if (n > m) {
-            int d = n - m - 1;
-            for (int i = 0; i < d; ++i) {
-                t[m + i] = 0;
-            }
-            m += d;
-            t[m] = '\0';
-        } else {
-            t[m] = '\0';
-        }
-        subtract_big_number(s, n, t, m);
-        m = tmp.length();
-        for (int i = 0; i < m; ++i) {
-            t[i] = st[i] - '0';
-        }
-        t[m] = '\0';
-    }
-    for (int i = 0; i < n; ++i) {
-        s[i] += '0';
-    }
-    return atoi(s);
+    return remainder[n - 1];
 }
 
 #endif //ALGORITHMS_OLD_NUMBER_H

@@ -9,14 +9,16 @@ int main() {
     cin >> s;
     cin >> x;
     cin >> y;
-    vector<int> unknowns;
+    vector<int> unknowns;//未知数字
+    int n = 0; // 数字长度
     for (int i = 0; i < MAX_N; ++i) {
         if (s[i] == '\0') {
+            n = i;
             break;
         }
         if (s[i] == '?') {
             unknowns.push_back(i);
         }
     }
-    old_number(s, unknowns, x, y);
+    old_number(s, unknowns, x, n, y);
 }
