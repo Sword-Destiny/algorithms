@@ -88,7 +88,7 @@ int count_distance(int location, int min_distance, int i) {
     int shop_end = shops[i + k1];
     int distance;
     if ((shop_begin - location) * (location - shop_end) >= 0) {
-        distance = 2 * abs(shop_begin - shop_end);
+        distance = 2 * (shop_end - shop_begin);
     } else {
         distance = 2 * max(abs(shop_begin - location), abs(location - shop_end));
     }
