@@ -8,6 +8,7 @@ add_definitions(-O0)
 include(TestBigEndian)
 test_big_endian(ALGORITHM_IS_BIG_ENDIAN)
 
+add_executable(matrix_min_distance src/new_coder/matrix_min_distance.cpp include/new_coder/matrix_min_distance.h)
 add_executable(min_shop_distance_google include/hiho/min_shop_distance_google.h src/hiho/min_shop_distance_google.cpp)
 add_executable(reverse_parentheses src/hiho/reverse_parentheses.cpp include/hiho/reverse_parentheses.h)
 add_executable(min_shopping_distance src/hiho/min_shopping_distance.cpp include/hiho/min_shopping_distance.h)

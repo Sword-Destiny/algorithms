@@ -127,7 +127,7 @@ void count_bounds() {
  * 第二个下表j代表初始商店索引
  * @param min_k
  */
- //TODO 试一试到查询的时候再计算单个数值，节约时间
+ //TODO 这里一开始就计算完了所有的距离，试一试到查询的时候再计算单个数值，节约时间，当然，如果你学过线段树，会更好做
 void compute(int min_k) {
     if (min_distances[min_k].first) {
         return;
