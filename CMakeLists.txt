@@ -8,6 +8,8 @@ add_definitions(-O0)
 include(TestBigEndian)
 test_big_endian(ALGORITHM_IS_BIG_ENDIAN)
 
+add_executable(nearest_small_number_index src/now_coder/nearest_small_number_index.cpp)
+add_executable(common_ancient src/now_coder/common_ancient.cpp)
 add_executable(max_happy_value src/now_coder/max_happy_value.cpp include/now_coder/max_happy_value.h)
 add_executable(matrix_min_distance src/now_coder/matrix_min_distance.cpp include/now_coder/matrix_min_distance.h)
 add_executable(min_shop_distance_google include/hiho/min_shop_distance_google.h src/hiho/min_shop_distance_google.cpp)
