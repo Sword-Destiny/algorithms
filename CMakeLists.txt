@@ -8,6 +8,7 @@ add_definitions(-O0)
 include(TestBigEndian)
 test_big_endian(ALGORITHM_IS_BIG_ENDIAN)
 
+add_executable(tree_edge_nodes src/now_coder/tree_edge_nodes.cpp)
 add_executable(tree_find_swap_node src/now_coder/tree_find_swap_node.cpp)
 add_executable(nearest_small_number_index src/now_coder/nearest_small_number_index.cpp)
 add_executable(common_ancient src/now_coder/common_ancient.cpp)
