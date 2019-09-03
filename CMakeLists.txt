@@ -8,6 +8,8 @@ add_definitions(-O0)
 include(TestBigEndian)
 test_big_endian(ALGORITHM_IS_BIG_ENDIAN)
 
+add_executable(n_queen_faster src/now_coder/n_queen_faster.cpp)
+add_executable(n_queen src/now_coder/n_queen.cpp)
 add_executable(n_max_multiply src/now_coder/n_max_multiply.cpp)
 add_executable(tree_edge_nodes src/now_coder/tree_edge_nodes.cpp)
 add_executable(tree_find_swap_node src/now_coder/tree_find_swap_node.cpp)
