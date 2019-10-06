@@ -2,12 +2,13 @@
 // Created by yuanhao on 2019-9-23.
 //
 #include <vector>
+#include <iostream>
 
 using namespace std;
 
 class Solution {
 public:
-    vector<int> printMatrix(vector<vector<int> > matrix) {
+    static vector<int> printMatrix(vector<vector<int> > matrix) {
         vector<int> res;
         int m = matrix.size();
         int n = matrix[0].size();
@@ -85,6 +86,9 @@ int main() {
     matrix.push_back({5, 6, 7, 8});
     matrix.push_back({9, 10, 11, 12});
     matrix.push_back({13, 14, 15, 16});
-    Solution s;
-    s.printMatrix(matrix);
+    vector<int> v = Solution::printMatrix(matrix);
+    for (int i : v) {
+        cout << i << " ";
+    }
+    cout << endl;
 }

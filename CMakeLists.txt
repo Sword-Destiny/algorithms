@@ -8,6 +8,8 @@ add_definitions(-O0)
 include(TestBigEndian)
 test_big_endian(ALGORITHM_IS_BIG_ENDIAN)
 
+add_executable(insert_number src/now_coder/insert_number.cpp)
+add_executable(lcm_gcd src/baidu/lcm_gcd.cpp)
 add_executable(rect_cover src/now_coder/rect_cover.cpp)
 add_executable(print_matrix src/now_coder/print_matrix.cpp)
 add_executable(sum_of_lucky_number src/hiho/sum_of_lucky_number.cpp)
