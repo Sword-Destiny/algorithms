@@ -1,21 +1,29 @@
-#include<bits/stdc++.h>
+#include <iostream>
+#include <cmath>
 
 using namespace std;
 
-int solve(int x) {
-    if (x == 0 || x == 1) {
-        return x;
-    }
-    if (x % 2 == 0) {
-        return 1 + solve(x / 2);
-    } else {
-        return 1 + solve((x + 1) / 2);
-    }
-}
-
 int main() {
-    int n = 100;
-    int ans = solve(n);
-    cout << ans << endl;
+    int n;
+    cin >> n;
+    int size = pow(2, n);
+    int a[size];
+    int i = 1;
+    a[0] = -1;
+    int len = 1;
+    for (; i < n; i++) {
+        a[len] = -1;
+        for (int j = 1; j <= len; j++) {
+            a[len + j] = -a[len - j];
+        }
+        len = len * 2 + 1;
+    }
+    for (int index = 0; index < len; index++) {
+        if (a[index] == -1) {
+            cout << "down" << endl;
+        } else {
+            cout << "up" << endl;
+        }
+    }
     return 0;
 }
