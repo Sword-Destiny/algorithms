@@ -33,7 +33,7 @@ int main() {
     int n = 0;
     int root = 0;
     cin >> n >> root;
-    int father[n + 1];
+    int father[n + 1];// 保存父节点信息
     int f, l, r;
     for (int i = 0; i < n; i++) {
         cin >> f >> l >> r;
@@ -53,13 +53,14 @@ int main() {
     while (l != root) {
         ld++;
         l = father[l];
-    }
+    } // 这个while循环用于计算左节点深度
     while (r != root) {
         rd++;
         r = father[r];
-    }
+    }//这个while循环用于计算右节点深度
     l = ln;
     r = rn;
+    // 下面这个if-else会将深度更低的节点上移，抹平两个节点的深度差距
     if (ld > rd) {
         int bd = ld - rd;
         for (int i = 0; i < bd; i++) {
@@ -71,6 +72,7 @@ int main() {
             r = father[r];
         }
     }
+    // 然后一起上移，直到找到公共祖先节点
     while (l != r) {
         l = father[l];
         r = father[r];
