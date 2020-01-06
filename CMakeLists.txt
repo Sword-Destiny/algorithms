@@ -8,6 +8,7 @@ add_definitions(-O0)
 include(TestBigEndian)
 test_big_endian(ALGORITHM_IS_BIG_ENDIAN)
 
+add_executable(curve_approaching_algorithm src/now_coder/curve_approaching_algorithm.cpp)
 add_executable(paper_game src/now_coder/paper_game.cpp)
 add_executable(perfect_card_mix src/now_coder/perfect_card_mix.cpp)
 add_executable(insert_number src/now_coder/insert_number.cpp)
