@@ -8,6 +8,7 @@ add_definitions(-O0)
 include(TestBigEndian)
 test_big_endian(ALGORITHM_IS_BIG_ENDIAN)
 
+add_executable(sub_number src/now_coder/sub_number.cpp)
 add_executable(max_incress_subsequence src/now_coder/max_incress_subsequence.cpp)
 add_executable(binary_number src/now_coder/binary_number.cpp)
 add_executable(move_candy src/now_coder/move_candy.cpp)
