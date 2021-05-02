@@ -103,3 +103,4 @@ add_executable(largest_rectangle_in_histogram src/advanced/largest_rectangle_in_
 add_executable(slice_min src/advanced/slice_min.cpp include/advanced/slice_min.h)
 add_executable(k-anonymous_sequence src/advanced/k-anonymous_sequence.cpp include/advanced/k-anonymous_sequence.h)
 add_executable(tmp src/tmp.cpp)
+add_executable(fill_rect src/leet_code_interesting/fill_rect.cpp)
