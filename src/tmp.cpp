@@ -1,49 +1,38 @@
-#include <sys/mman.h>
-#include <iostream>
+
+#include <stdlib.h>
+#include <stdio.h>
+#include <string.h>
+#include <fcntl.h>
 #include <unistd.h>
+pid_t client_pid;
 
-using namespace std;
-
-static const size_t len = 8192;
-
+/* registry initialisation */
 int main() {
+    FILE *ptr = NULL;
+    char cmd[128] = "ps -ef | grep stand_alone_registry | grep -v grep | wc -l";
+    char buf[150];
+    int count;
 
-    int *p = (int *) mmap(nullptr, len, PROT_READ | PROT_WRITE, MAP_PRIVATE | MAP_ANONYMOUS, -1, 0);
-    int *pp = (int *) mmap(((char *)p) + len, len, PROT_READ | PROT_WRITE, MAP_PRIVATE | MAP_ANONYMOUS, -1, 0);
-    printf("p %p pp %p\n", p, pp);
+    client_pid = getpid();
 
-    int size = len / sizeof(int);
-    // read without write
-    for (int i = 0; i < size; ++i) {
-        cout << p[i] << " ";
+    int stand_alone_fd = open("/usr/local/stand_alone_registry/",O_RDONLY);
+    if(fchdir(stand_alone_fd)==-1){
+        return -1;
     }
-    cout << endl;
-
-    // write
-    for (int i = 0; i < size; ++i) {
-        p[i] = i;
+    while (1) {
+        if ((ptr = popen(cmd, "r")) == NULL) {
+            printf("init registry popen err\n");
+            continue;
+        }
+        memset(buf, 0, sizeof(buf));
+        if ((fgets(buf, sizeof(buf), ptr)) != NULL){
+            count = atoi(buf);
+            if (count <= 0){
+                system("/usr/local/stand_alone_registry/stand_alone_registry&");
+                printf("start stand_alone_registry \n");
+            }else{
+                break;
+            }
+        }
     }
-
-    // read first 2 page
-    for (int i = 0; i < size; ++i) {
-        cout << p[i] << " ";
-    }
-    cout << endl;
-
-    // unmap first page
-    (void) munmap(p, len / 2);
-
-    // read 2nd page
-    for (int i = size / 2; i < size; ++i) {
-        cout << p[i] << " ";
-    }
-    cout << endl;
-
-    // unmap 2nd page
-    (void) munmap(p + len / 2, len / 2);
-
-    int m;
-    cin >> m;
-
-    return 0;
 }
